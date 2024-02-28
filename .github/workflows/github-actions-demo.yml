@@ -6,7 +6,7 @@ on:
       - main
     paths-ignore:
       - '.github/**'
-  pull_request_target:
+  pull_request:
     branches:
       - main
   schedule:
