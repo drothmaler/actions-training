@@ -13,4 +13,18 @@ on:
     - cron: '15 6 * * SUN'
   workflow_dispatch:
 
+jobs: 
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo " '${{ github.event_name }}' triggered the event."
+          echo " Workfow is running on branch ${{ github.ref }} of the repo."
+
+      - uses: actions/checkout@latest
+
+      - name: List files in the repository
+        run: |
+          echo "The repository ${{ github.repository }} contains the following files:"
+          tree
 
