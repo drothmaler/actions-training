@@ -21,7 +21,7 @@ jobs:
           echo " '${{ github.event_name }}' triggered the event."
           echo " Workfow is running on branch ${{ github.ref }} of the repo."
 
-      - uses: actions/checkout@latest
+      - uses: actions/checkout
 
       - name: List files in the repository
         run: |
